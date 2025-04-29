@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Les Pereira - Art Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { font-family: sans-serif; margin: 0; background: #fdfdfd; color: #333; }
+    header { text-align: center; padding: 2rem; }
+    main { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; padding: 1rem; }
+    .artwork { position: relative; max-width: 300px; cursor: pointer; transition: transform 0.3s; border: 1px solid #ccc; border-radius: 8px; background: #fff; overflow: hidden; }
+    .artwork img { width: 100%; height: auto; display: block; }
+    .caption { padding: 0.5rem; text-align: center; font-size: 0.9rem; }
+    .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); justify-content: center; align-items: center; z-index: 10; }
+    .modal img { max-width: 90%; max-height: 90%; }
+    .modal:target { display: flex; }
+    footer { text-align: center; padding: 2rem; font-size: 0.8rem; color: #777; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Les Pereira</h1>
+  <p>Artist | Painter | Digital Creator</p>
+</header>
+
+<main>
+  <a href="#img1" class="artwork">
+    <img src="LPereira-CherryBlossoms.jpeg." alt="Artwork 1">
+     <div class="caption">Cherry Blossoms: Acrylic on Canvas</div>
+  </a>
+  <a href="#img2" class="artwork">
+    <img src="Sunset LP.jpeg." alt="Artwork 2">
+    <div class="caption">Sunset: Acrylic on Canvas</div>
+  </a>
+<a href="#img3" class="artwork">
+    <img src="LP-1.jpg" alt="Artwork 4">
+    <div class="caption">Beach in Hawaii: Acrylic</div>
+  </a>
+<a href="#img3" class="artwork">
+    <img src="LP-2.jpg" alt="Artwork 5">
+    <div class="caption">Cherry Blossom trees: Acrylic</div>
+  </a>
+<a href="#img3" class="artwork">
+    <img src="LP-3.jpg" alt="Artwork 6">
+    <div class="caption">A Landscape: Acrylic</div>
+  </a>
+<a href="#img3" class="artwork">
+    <img src="LP-4.jpg" alt="Artwork 7">
+    <div class="caption">Winter Landscape: Acrylic</div>
+  </a>
+  <a href="#img3" class="artwork">
+    <img src="LP-5.jpg" alt="Artwork 8">
+    <div class="caption">Stormy Sea: Oil</div>
+</a>
+  <a href="#img3" class="artwork">
+    <img src="LP-6.jpg" alt="Artwork 9">
+    <div class="caption">Kovalam Beach: Oil</div>
+  </a>
+  <a href="#img3" class="artwork">
+    <img src="LP-7.jpg" alt="Artwork 10">
+    <div class="caption">Mt.McKinley: Acrylic</div>
+  </a>
+  <a href="#img3" class="artwork">
+    <img src="LP-8.jpg" alt="Artwork 11">
+    <div class="caption">Irises: Oil</div>
+  </a>
+  <a href="#img3" class="artwork">
+    <img src="LP-9.jpg" alt="Artwork 12">
+    <div class="caption">Beach in Hawaii: Oil</div>
+  </a>
+  <a href="#img3" class="artwork">
+    <img src="LP-10.jpg" alt="Artwork 13">
+    <div class="caption">Japanese Garden: Acrylic</div>
+  </a>
+  <a href="#img3" class="artwork">
+    <img src="LP-11.jpg" alt="Artwork 14">
+    <div class="caption">Cherry Blossom Sprig: Acrylic</div>
+  </a>
+  <a href="#img3" class="artwork">
+    <img src="LP-12.jpg" alt="Artwork 15">
+    <div class="caption">Japanese Garden: Acrylic</div>
+</a>
+  <a href="#img3" class="artwork">
+    <img src="LP-13.jpg" alt="Artwork 16">
+    <div class="caption">Boats in San Fransisco: Acrylic</div>
+</a>
+  <a href="#img3" class="artwork">
+    <img src="LP-14.jpg" alt="Artwork 17">
+    <div class="caption">Birch Trees in Autumn: Acrylic</div>
+</a>
+  <a href="#img3" class="artwork">
+    <img src="LP-15.jpg" alt="Artwork 18">
+    <div class="caption">Trees in Autumn: Acrylic</div>
+</a>
+  <a href="#img3" class="artwork">
+    <img src="LP-16.jpg" alt="Artwork 19">
+    <div class="caption">Hawaii Seascape: Acrylic</div>
+</a>
+  <a href="#img3" class="artwork">
+    <img src="LP-17.jpg" alt="Artwork 20">
+    <div class="caption">Mount Everest: Acrylic</div>
+</a>
+  <a href="#img3" class="artwork">
+    <img src="LP-18.jpg" alt="Artwork 21">
+    <div class="caption">Mountain Landscape: Acrylic</div>
+</a>
+  <a href="#img3" class="artwork">
+    <img src="LP-19.jpg" alt="Artwork 22">
+    <div class="caption">Yosemite: Acrylic</div>
+</a>
+  <a href="#img3" class="artwork">
+    <img src="LP-21.jpg" alt="Artwork 15">
+    <div class="caption">Santa Barbera: Acrylic</div>
+</a>
+  <a href="#img3" class="artwork">
+    <img src="LP-22.jpg" alt="Artwork 15">
+    <div class="caption">Medium: Acrylic</div>
+</a>
+  <!-- Add more artworks the same way -->
+</main>
+
+<!-- Hidden modals for each image -->
+<div id="img1" class="modal" onclick="this.style.display='none'">
+  <img src="your-image1.jpg" alt="Artwork 1 Enlarged">
+</div>
+<div id="img2" class="modal" onclick="this.style.display='none'">
+  <img src="your-image2.jpg" alt="Artwork 2 Enlarged">
+</div>
+
+<footer>
+  &copy; 2025 Les Pereira | Contact: your.email@example.com
+</footer>
+
+</body>
+</html>
+
